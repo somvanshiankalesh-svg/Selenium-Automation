@@ -44,7 +44,7 @@
 //}   
 
 package Testing.Selenium_Automation;
-
+ 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -80,6 +80,7 @@ public class possitive_login_test {
         // Verify URL
         System.out.println("URl after login:" + driver.getCurrentUrl());
         Thread.sleep(2000);
+        
         
         //verify new page contains expected text ("Cogratualations login successfully")
         WebElement greet_text=driver.findElement(By.tagName("strong"));
