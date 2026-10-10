@@ -19,6 +19,8 @@ public static void main(String[]args)  throws Throwable
 	//find out email textbox
 	driver.findElement(By.id("hero_user_email")).sendKeys("somvansiankalesh@gmail.com");
 	
+	//Password 
+    driver.findElement(By.id(""))
 	
 		
 } 
