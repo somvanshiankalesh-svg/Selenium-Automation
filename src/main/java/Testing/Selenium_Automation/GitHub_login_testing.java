@@ -15,7 +15,7 @@ public static void main(String[]args)  throws Throwable
 	driver.get("https://github.com/");
 	
 	
-	//locator name 
+	//locator name is id 
 	//find out email textbox
 	driver.findElement(By.id("hero_user_email")).sendKeys("somvansiankalesh@gmail.com");
 	
