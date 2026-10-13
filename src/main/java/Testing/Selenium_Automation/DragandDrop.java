@@ -23,6 +23,8 @@ public class DragandDrop {
 		 
 		 //drop
 		 WebElement drop=driver.findElement(By.id("droppable"));
+		 Thread.sleep(1000);
+		 
 		 
 		 //Action
 		 Actions ac=new Actions(driver);
