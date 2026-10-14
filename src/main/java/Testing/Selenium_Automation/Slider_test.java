@@ -20,10 +20,10 @@ public class Slider_test {
 //		a.dragAndDropBy(leftslider, 100, 0).build().perform();
 //		
 		//Rigth Slider 
-		WebElement rightslider=driver.findElement(By.xpath("//span[@style='left: 60.4%']"));
+		WebElement rightslider=driver.findElement(By.xpath("//span[@style='left: 60%;']"));
 		
 		Actions a=new Actions(driver);
-		a.dragAndDropBy(rightslider, -80, 0).build().perform();
+		a.dragAndDropBy(rightslider, -50, 0).build().perform();
 		
 		
 		

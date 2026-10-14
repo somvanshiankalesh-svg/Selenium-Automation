@@ -15,19 +15,22 @@ public class Alert_test_automation {
 		
 		driver.get("https://demo.automationtesting.in/Alerts.html");
 		
-		//simple alert 
-		driver.findElement(By.id("OKTab")).click();
-		Thread.sleep(1000);
+		//simple alert
 		driver.findElement(By.xpath("//a[@href='#OKTab']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[@onclick='alertbox()']"));
 		Alert al1=driver.switchTo().alert();
 		System.out.println("click the button to display an alert box:"+al1.getText());
 		Thread.sleep(1000);
 		al1.accept();
 		
 		//Alert With OK and cancel 
-		driver.findElement(By.id("CancelTab")).click();
-		Alert al5=driver.switchTo().alert();
-		al5.accept();
+		driver.findElement(By.xpath("//a[@href='Caneltab']"));
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//button[@oneclick='confirmbox()']"));
+		Alert al2=driver.switchTo().alert();
+		al2.accept();
+		
 		
 		//Alert with textbox
 		driver.findElement(By.id("Textbox")).sendKeys("Ankalesh Somvanshi");
