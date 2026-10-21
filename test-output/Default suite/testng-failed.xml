@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testing.Selenium_Automation.parameterized_testng">
+      <class name="Swaglab_logintest">
         <methods>
-          <include name="display_number"/>
+          <include name="verify_login"/>
         </methods>
-      </class> <!-- Testing.Selenium_Automation.parameterized_testng -->
+      </class> <!-- Swaglab_logintest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -4,7 +4,7 @@
   <test thread-count="5" name="Test">
   <parameter name="P" value="90"></parameter>
     <classes>
-     <class name="Testing.Selenium_Automation.All_Annotation"/>
+     <class name="Testing.Selenium_Automation.priority_intestNG"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
