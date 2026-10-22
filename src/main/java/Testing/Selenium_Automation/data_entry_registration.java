@@ -31,7 +31,7 @@ public class data_entry_registration {
 		driver.findElement(By.xpath("//div/textarea")).sendKeys("At post wadgaon dist Chhatrapati sambhajinagar");
 		
 	   // By.Xpath //tagname[@attribute='value']
-		driver.findElement(By.xpath("//input[text='Gender:']")).click();
+		driver.findElement(By.xpath("//input[@value='male']")).click();
 		
 		
 		// handling multiple webelements 
@@ -43,19 +43,67 @@ public class data_entry_registration {
 	   {
 		   WebElement check=it.next(); //sunday monday
 		   check.click();//clicked on sunday clicked 
-		   Thread.sleep(1000);
+		   //Thread.sleep(1000);
 		   
 	   }
 	   
-	   
+	   //select country
 	   driver.findElement(By.id("country")).click();
+	   driver.findElement(By.xpath("//*[@id=\"country\"]/option[10]")).click();
 	
 	   //choice color 
-	   driver.findElement(By.xpath("//option[@='Red']")).click();
+	   driver.findElement(By.xpath("//option[@value='red']")).click();
 	   
+	   //choose animal
+	   driver.findElement(By.xpath("//option[@value='lion']")).click();
 	   
+	   //DATE peacker 1
+	   driver.findElement(By.id("datepicker")).sendKeys("23/10/2026");
+	   
+	   //datepicker 2
+	   driver.findElement(By.id("txtDate")).click();
+	  // driver.findElement(By.xpath("//option[@value='9']")).click();
 		
-		
+	   // Select Month
+       WebElement monthDropdown =driver.findElement(By.className("ui-datepicker-month"));
+
+       Select month = new Select(monthDropdown);
+       month.selectByVisibleText("Oct");
+
+       // Select Year
+       WebElement yearDropdown =driver.findElement(By.className("ui-datepicker-year"));
+
+       Select year = new Select(yearDropdown);
+       year.selectByVisibleText("2026");
+
+       // Select Date 15
+       driver.findElement(By.xpath("//a[text()='23']")).click();
+
+       // Print selected date
+       String selectedDate =driver.findElement(By.id("txtDate")).getAttribute("value");
+
+       System.out.println("Selected Date: " + selectedDate);
+       
+       //datepicker 3
+       //first date 
+       driver.findElement(By.id("start-date")).sendKeys("23-10-2026");
+       
+       //last date 
+       driver.findElement(By.id("end-date")).sendKeys("30-10-2026");
+       
+       //submit button 
+       driver.findElement(By.xpath("//button[text()='Submit']")).click();
+       
+       //home Link
+       //driver.findElement(By.xpath("//a[text()='Home']")).click();
+       
+       //post Atom 
+       driver.findElement(By.xpath("//a[text()='Posts (Atom)']")).click();
+       
+       //navigate webapp
+     	driver.navigate().to("https://testautomationpractice.blogspot.com/");
+   	    Thread.sleep(2000);
+       
 	}
 
 	
