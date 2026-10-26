@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Swaglab_logintest">
+      <class name="Concept_of_Linteners.Orange_HRM_Listner">
         <methods>
-          <include name="verify_login"/>
+          <include name="logout"/>
+          <include name="verifylaunch"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- Swaglab_logintest -->
+      </class> <!-- Concept_of_Linteners.Orange_HRM_Listner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
