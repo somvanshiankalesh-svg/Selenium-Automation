@@ -76,13 +76,13 @@ public class data_entry_registration {
        Select year = new Select(yearDropdown);
        year.selectByVisibleText("2026");
 
-       // Select Date 15
-       driver.findElement(By.xpath("//a[text()='23']")).click();
+       // Select Date 23
+       driver.findElement(By.xpath("//a[text()='23']")).click(); 
 
        // Print selected date
-       String selectedDate =driver.findElement(By.id("txtDate")).getAttribute("value");
+      // String selectedDate =driver.findElement(By.id("txtDate")).getAttribute("value");
 
-       System.out.println("Selected Date: " + selectedDate);
+     // System.out.println("Selected Date: " + selectedDate);
        
        //datepicker 3
        //first date 
@@ -97,12 +97,29 @@ public class data_entry_registration {
        //home Link
        //driver.findElement(By.xpath("//a[text()='Home']")).click();
        
-       //post Atom 
-       driver.findElement(By.xpath("//a[text()='Posts (Atom)']")).click();
+//       //post Atom 
+//       driver.findElement(By.xpath("//a[text()='Posts (Atom)']")).click();
        
-       //navigate webapp
-     	driver.navigate().to("https://testautomationpractice.blogspot.com/");
-   	    Thread.sleep(2000);
+//       //navigate webapp
+//     	driver.navigate().to("https://testautomationpractice.blogspot.com/");
+//   	    Thread.sleep(2000);
+       
+       
+       
+       //choose Single file 
+       driver.findElement(By.id("singleFileInput")).sendKeys("C:\\Users\\HP\\OneDrive\\Pictures\\Camera Roll 1\\IMG_20230930_212647.jpg");
+       driver.findElement(By.xpath("//button[@type='submit']")).click();
+       
+       //Choose Multiple Files 
+       driver.findElement(By.id("multipleFilesInput")).sendKeys("C:\\Users\\HP\\OneDrive\\Pictures\\My_Profile_Photo.png\n"+"C:\\Users\\HP\\OneDrive\\Pictures\\Camera Roll 1\\1000032847.jpg");
+       driver.findElement(By.xpath("//button[text()='Upload Multiple Files']")).click();
+       
+       //Chekbox
+       List<WebElement> check=driver.findElements(By.xpath("//table[@id='productTable']//input[@type='checkbox']"));
+       
+      // for(int i=0;)
+       
+       
        
 	}
 
